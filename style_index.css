@@ -75,10 +75,10 @@ body.index{
   z-index: 10; 
 }
 .carousel-info h1 {
-  font-size:4rem;
-  margin-bottom: 0.5rem;
+  font-size:5rem;
+  margin-bottom: 0.8rem;
   font-family:'Dancing Script', cursive;
-  text-shadow: 0 0 5px #187718, 0 0 10px #000, 0 0 15px #000;
+  text-shadow: 0 0 5px #d5e806e0, 0 0 10px #b1df0a, 0 0 15px #0bf00b;
 
 }
 .carousel-info p {
@@ -454,5 +454,14 @@ color:#1b8331;
 
   .footer-social {
     justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  .carousel-info h1 {
+    font-size: 3.5rem; 
+  }
+
+  .carousel-info p {
+    font-size: 1.5rem; 
   }
 }

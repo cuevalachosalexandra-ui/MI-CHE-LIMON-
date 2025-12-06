@@ -17,6 +17,7 @@
 
 /* Título principal */
 .fotos-page h1 {
+  font-family: 'Dancing Script', cursive;;
   font-size: 2.6rem;
   color: #00599d;
   text-shadow: 0 2px 4px rgba(0,0,0,0.15);
@@ -73,15 +74,15 @@
   backdrop-filter: blur(3px);
 }
 
-/* Imagen dentro del modal */
 .modal-contenido {
   margin: auto;
   display: block;
   width: 80%;
   max-width: 700px;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 20px rgb(139, 208, 21);
   animation: zoom 0.5s;
+  
 }
 
 @keyframes zoom {
@@ -89,20 +90,12 @@
   to {transform: scale(1);}
 }
 
-/* Texto debajo de la imagen */
-#caption {
-  text-align: center;
-  color: #e0f7fa;
-  padding: 15px;
-  font-size: 1rem;
-}
-
 /* Botón de cierre */
 .cerrar {
   position: absolute;
   top: 25px;
   right: 40px;
-  color: #fff;
+  color: #53d81e;
   font-size: 45px;
   font-weight: bold;
   cursor: pointer;
@@ -113,7 +106,6 @@
   color: #45cc43;
 }
 
-/* BOTÓN VOLVER */
 a {
   display: inline-block;
   background: #28c333;
@@ -127,7 +119,7 @@ a {
 }
 
 a:hover {
-  background: #01579b;
+  background: #47970e;
   transform: scale(1.05);
 }
 </style>
@@ -147,7 +139,8 @@ a:hover {
     <img src="img/foto6.jpg" alt="">
     <img src="img/foto14.jpg" alt="">
   </div>
-<button onclick="location.href='index.html'">Regresar al inicio</button>
+  
+  <a href="index.html" class="btn-regresar">Regresar al inicio</a>
 
   <div id="modal" class="modal">
     <span class="cerrar">&times;</span>
@@ -161,3 +154,4 @@ a:hover {
   
 </body>
 </html>
+

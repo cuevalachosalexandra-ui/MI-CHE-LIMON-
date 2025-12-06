@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Promociones - Mi Restaurante</title>
+  <style>
+body {
+  font-family: 'Dancing Script', cursive;
+  padding: 0;
+  background: #eaeadc;
+  color: #333;
+  text-align: center;
+}
+
+.promociones {
+  background: url('img/promociones.jpg') center/cover no-repeat; 
+  width: 100vw;    
+  text-align: center;
+  margin: 0;                       
+  padding: 2px 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+/*semitransparente*/
+.promociones::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(98, 84, 84, 0.45);
+  border-radius: inherit;
+  z-index: 0;
+}
+
+/* Contenido por encima del overlay */
+.promociones h1,
+.promociones p {
+  position: relative;
+  text-align: center;
+}
+.promociones h1 {
+  font-size: 2.5rem;
+  color: #27541e;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  text-shadow: 2px 2px 5px rgba(236, 232, 232, 0.7);
+}
+.promociones p {
+  font-size: 1.1rem;
+  color: #eadddd;
+  text-align: center;
+  text-shadow: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* tarjetas */
+.contenedor {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 50px;
+      padding: 50px;
+    }
+
+    .promo-card {
+      background: rgb(226, 231, 195);
+      border-radius: 15px;
+      box-shadow: 0 8px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: auto; 
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .promo-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(129, 51, 51, 0.2);
+    }
+
+    .promo-card img {
+    width: 100%;          
+    height: 200px;        
+    object-fit: cover;   
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: block;
+    }
+    .promo-card .contenido {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .promo-card h3 {
+      margin: 10px 0;
+      color: #36490a;
+    }
+
+    .promo-card p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .promo-card button {
+      background: #28bc2d;
+      color: rgb(25, 24, 24);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition:  0.3s;
+    }
+
+    .promo-card button:hover {
+      background: #4cac1c;
+    }
+
+    a {
+      display: inline-block;
+      background: #28c333;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 10px;
+      margin: 30px auto 60px;
+      transition: 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  background: #01579b;
+  transform: scale(1.05);
+}
+
+/* Tablets*/
+@media (max-width: 992px) {
+  .promociones {
+    padding: 40px 60px;
+  }
+
+  .promociones h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+  .promociones {
+    padding: 40px 30px;
+  }
+
+  .promociones h1 {
+    font-size: 1.8rem;
+  }
+
+  .promociones p {
+    font-size: 1rem;
+  }
+}
+
+/* Celulares*/
+@media (max-width: 480px) {
+  .promociones {
+    padding: 30px 20px;
+  }
+
+  .promociones h1 {
+    font-size: 1.6rem;
+  }
+
+  .contenedor {
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .promo-card img {
+    height: 160px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+ <header>
+    <section class="promociones">
+      <h1>Promociones Especiales</h1>
+      <p>¡Disfruta nuestras ofertas por tiempo limitado!</p>
+    </section>
+  </header>
+
+  <!-- 🔹 SECCIÓN PRINCIPAL DE PROMOCIONES -->
+
+  <main class="contenedor">
+    <div class="promo-card">
+      <img src="img/cevichemixto.jpg" alt="Ceviche promocional">
+      <div class="contenido">
+        <h3>50% dscto en la segunda fuente de Ceviche Mixto</h3>
+        <p>Lleva la segunda fuente a un súper precio ¡Solo por esta semana!</p>
+        <button onclick="location.href='formulario_pedidos.html'">Ordenar Ahora</button>
+      </div>
+    </div>
+
+    <div class="promo-card">
+      <img src="img/arroz.jpg" alt="Arroz con mariscos">
+      <div class="contenido">
+        <h3>Combo Familiar</h3>
+        <p>Arroz con mariscos + bebida para 4 personas a precio especial.</p>
+        <button onclick="location.href='formulario_reservas.html'">Reservar</button>
+      </div>
+    </div>
+  </main>
+
+   <button onclick="location.href='index.html'">Regresar al inicio</button>
+
+</body>
+</html>

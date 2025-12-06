@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fotos Destacadas</title>
+  <style>
+    
+.fotos-page {
+  background: linear-gradient(180deg, #f2ead6);
+  font-family:'Dancing Script', cursive;
+  color: #131414;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Título principal */
+.fotos-page h1 {
+  font-size: 2.6rem;
+  color: #00599d;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  margin-top: 50px;
+  font-weight: 700;
+}
+
+/* Descripción */
+.fotos-page p {
+  font-size: 1.5rem;
+  color: #131414;
+  margin-bottom: 40px;
+}
+
+/* galeria */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 0 50px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.galeria img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  border: 3px solid #fff;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 96, 128, 0.4);
+  border-color: #23282a;
+}
+
+/*modal imagen*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(3px);
+}
+
+/* Imagen dentro del modal */
+.modal-contenido {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  animation: zoom 0.5s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.8);}
+  to {transform: scale(1);}
+}
+
+/* Texto debajo de la imagen */
+#caption {
+  text-align: center;
+  color: #e0f7fa;
+  padding: 15px;
+  font-size: 1rem;
+}
+
+/* Botón de cierre */
+.cerrar {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  color: #fff;
+  font-size: 45px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.cerrar:hover {
+  color: #45cc43;
+}
+
+/* BOTÓN VOLVER */
+a {
+  display: inline-block;
+  background: #28c333;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 10px;
+  margin: 30px auto 60px;
+  transition: 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  background: #01579b;
+  transform: scale(1.05);
+}
+</style>
+
+</head>
+<body class="fotos-page">
+  <h1>Fotos Destacadas </h1>
+  <p>Los mejores momentos capturados en Mi Che Limón</p>
+  
+  <div class="galeria">
+    <img src="img/foto9.jpg" alt="">
+    <img src="img/foto10.jpg" alt="">
+    <img src="img/foto15.jpg" alt="">
+    <img src="img/foto16.jpg" alt="">
+    <img src="img/foto12.jpg" alt="">
+    <img src="img/foto13.jpg" alt="">
+    <img src="img/foto6.jpg" alt="">
+    <img src="img/foto14.jpg" alt="">
+  </div>
+<button onclick="location.href='index.html'">Regresar al inicio</button>
+
+  <div id="modal" class="modal">
+    <span class="cerrar">&times;</span>
+    <img class="modal-contenido" id="imagenAmpliada">
+    <p id="caption"></p>
+</div>
+
+
+  <script src="main.js"></script>
+
+  
+</body>
+</html>

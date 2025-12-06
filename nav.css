@@ -1,0 +1,103 @@
+.site-header { 
+  background: #f9f9f9; 
+  border-bottom: 1px solid #7ad247;
+  position: sticky;
+  top: 0; 
+  z-index: 50; 
+}
+
+.header-inner { 
+  display: flex; 
+  align-items: center;
+  justify-content: space-between; 
+  gap: 1rem; 
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brand { 
+  display: flex; 
+  align-items: center; 
+  gap: 0.6rem; 
+  text-decoration: none; 
+  color: #1e7b07; 
+}
+
+.logo { 
+  width: 54px; 
+  height: 54px; 
+  object-fit: cover; 
+  border-radius: 8px; 
+}
+
+.brand-name { 
+  font-family: 'Dancing Script', cursive; 
+  font-size: 1.6rem; 
+  letter-spacing: 0.6px; 
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  position: static;
+  background: transparent;
+  width: auto;
+  padding: 0;
+  box-shadow: none;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;;
+
+}
+
+.main-nav a {
+  color: #1e7b07;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+  background-color: #e2e745;
+  color: #0e0e0e;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  color: #139313;
+  width: 30px;
+}
+
+/*RESPONSIVE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 70px;
+    right: 10px; /* más separado del borde derecho */
+    width: 60%;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    display: none;
+    box-shadow: -5px 5px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .header-inner {
+    padding: 10px;
+  }
+}
+

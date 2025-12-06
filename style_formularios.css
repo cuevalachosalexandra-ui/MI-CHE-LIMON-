@@ -1,0 +1,74 @@
+/* Formularios pedidos reservas */
+body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #a0d35ca4, #697b85);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; /* antes: center */
+      min-height: 100vh;       /* antes: height: 140vh */
+      padding-top: 2rem;       /* mejor que margin */
+      margin: 0;
+    }
+    .card {
+      background: rgb(238, 233, 218);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    label {
+      display: block;
+      text-align: left;
+      margin: 10px 0 5px;
+      color: #0c0c0c;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      outline: none;
+      transition: border 0.3s;
+    }
+    input:focus {
+      border: 1px solid #24b52b;
+    }
+    button {
+      background: #4ccf3e;
+      color: white;
+      border: none;
+      padding: 11px;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition:  0.3s;
+      margin-bottom: 4%;
+    }
+    button:hover {
+      background: #28af43;
+    }
+    a {
+      display: block;
+      margin-top: 15px;
+      color: #333;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .success-msg {
+      color: green;
+      margin-top: 15px;
+      font-weight: bold;
+      display: none; 
+      
+    }

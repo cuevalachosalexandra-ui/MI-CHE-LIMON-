@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Libro de Reclamaciones</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1rem 1.5rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #34a334;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #1b5e20;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      margin-top: 0.3rem;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      resize: vertical;
+      font-family: inherit;
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+
+    button.submit-btn {
+      margin-top: 2rem;
+      padding: 12px 20px;
+      background: #4ccf3e;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button.submit-btn:hover {
+      background: #28af43;
+    }
+
+    /* Botón regresar */
+    .btn-regresar {
+      background: #4ccf3e;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 2rem;
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      box-sizing: border-box;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      text-decoration: none;
+    }
+
+    .btn-regresar:hover {
+      background: #28af43;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .container {
+        padding: 1rem;
+        margin: 1rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Libro de Reclamaciones</h1>
+    <form action="#" method="post" onsubmit="return validarFormulario()">
+      <label for="nombre">Nombre Completo:</label>
+      <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo" />
+
+      <label for="domicilio">Domicilio:</label>
+      <input type="text" id="domicilio" name="domicilio" placeholder="Av. Calle, PJ" />
+ 
+      <label for="dni">DNI:</label>
+      <input type="text" id="dni" name="dni" maxlength="8" placeholder="8 dígitos" />
+
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" id="email" name="email" required placeholder="hola@email.com" />
+
+      <label for="telefono">Teléfono:</label>
+      <input type="text" id="telefono" name="telefono" maxlength="9"/>
+
+      <label for="hora">Hora del Reclamo:</label>
+      <input type="time" id="hora" name="hora"  />
+
+      <label for="reclamo">Descripción del Reclamo:</label>
+      <textarea id="reclamo" name="reclamo" required placeholder="Describe tu reclamo aquí"></textarea>
+
+    <button type="submit" class="submit-btn">Enviar Reclamo</button>
+    </form>
+
+    <a href="index.html" class="btn-regresar">Regresar</a>
+  </div>
+
+  <script>
+    function validarFormulario() {
+      const nombre = document.getElementById('nombre').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const reclamo = document.getElementById('reclamo').value.trim();
+
+      if (!nombre || !email || !reclamo) {
+        alert('Por favor, completa todos los campos.');
+        return false;
+      }
+
+      // Validación simple de email
+      const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!regexEmail.test(email)) {
+        alert('Por favor, ingresa un correo electrónico válido.');
+        return false;
+      }
+
+      alert('Reclamo enviado correctamente. Gracias por contactarnos.');
+      // Aquí puedes agregar código para enviar el formulario a un servidor o API.
+
+      return true; // Permite enviar el formulario (si no quieres enviar realmente, cambia a false)
+    }
+  </script>
+</body>
+</html>

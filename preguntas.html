@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas Frecuentes</title>
+  <style>
+    .faq-item {
+      text-align: center;
+      margin-bottom: 21px;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 15px;
+      background: #ffffff;
+      border-radius: 15px;
+      border: 1px solid #848181;
+      cursor: pointer;
+      transition: .3s;
+      max-width: 700px;  
+      margin: 0 auto 20px;
+
+    }
+
+    .faq-item:hover {
+      background: #80e25f;
+      border-color: #28af43;
+    
+    }
+
+    .faq-question {
+      margin-top: 10px;   
+      margin-bottom: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      color: #1b5e20;
+    }
+
+    .faq-answer {
+      display: none;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    .faq-item.open .faq-question {
+      color: #0f3e12;
+      
+    }
+    .btn-regresar {
+      background: #4ccf3e;
+      color: white;
+      border: none;
+      padding: 11px 20px;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 20px;
+      display: block;
+      width: 100%;
+      max-width: 700px; 
+      margin: 0 auto 20px;
+    }
+
+    .btn-regresar:hover {
+      background: #28af43;
+    }
+
+    @media (max-width: 480px) {
+      .faq-item {
+        padding: 12px;
+      }
+      .faq-question {
+        font-size: 0.9rem;
+      }
+      .btn-regresar {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+      }
+    }
+
+    /* Pantallas medianas (tablets) */
+    @media (min-width: 481px) and (max-width: 767px) {
+      .container {
+        padding: 2rem 1.5rem;
+      }
+      .faq-question {
+        font-size: 1.05rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Preguntas Frecuentes</h1>
+
+    <!-- FAQ 1 -->
+    <div class="faq-item">
+      <div class="faq-question">¿Qué es Mi Che Limón?</div>
+      <div class="faq-answer">
+       Somos un resturante especializado en pescados y mariscos con muchos años de experiencia en brindar la mejor atención a nuestros comensales.
+      </div>
+    </div>
+
+    <!-- FAQ 2 -->
+    <div class="faq-item">
+      <div class="faq-question">¿Cómo hago un pedido?</div>
+      <div class="faq-answer">
+        En la sección “Pedidos”, completa el formulario con tus datos y tu pedido será procesado.
+      </div>
+    </div>
+
+    <!-- FAQ 3 -->
+    <div class="faq-item">
+      <div class="faq-question">¿Realizan entregas a domicilio?</div>
+      <div class="faq-answer">
+        Sí, hacemos delivery en zonas cercanas al local con un costo adicional según la distancia.
+      </div>
+    </div>
+
+    <!-- FAQ 4 -->
+    <div class="faq-item">
+      <div class="faq-question">¿Puedo reservar una mesa?</div>
+      <div class="faq-answer">
+        Sí, puedes reservar desde la sección “Reservas” indicando la fecha, hora y número de personas.
+      </div>
+    </div>
+
+    <!-- FAQ 5 -->
+    <div class="faq-item">
+      <div class="faq-question">¿Los productos son frescos?</div>
+      <div class="faq-answer">
+        Todos nuestros ingredientes son frescos y de la mejor calidad.
+      </div>
+    </div>
+
+    <!-- FAQ 6 -->
+    <div class="faq-item">
+      <div class="faq-question">¿Atienden todos los días?</div>
+      <div class="faq-answer">
+        Atendemos de Lunes a Domingo, de 10 am hasta 5:30 pm.
+      </div>
+    </div>
+
+      <!-- FAQ 7 -->
+    <div class="faq-item">
+      <div class="faq-question">¿Tienen cochera?</div>
+      <div class="faq-answer">
+        Claro que sí, contamos con un espacio amplio para la comodidad y seguridad de nuestros clientes, totalmente gratuito.
+      </div>
+    </div>
+
+    <button class="btn-regresar" onclick="location.href='index.html'">Regresar al inicio</button>
+
+  </div>
+
+  <script>
+    const items = document.querySelectorAll(".faq-item");
+
+    items.forEach(item => {
+      item.addEventListener("click", () => {
+        item.classList.toggle("open");
+      });
+    });
+  </script>
+
+</body>
+</html>

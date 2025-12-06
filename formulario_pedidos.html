@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido - Mi Che Limón</title>
+  <link rel="stylesheet" href="style_formularios.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>Pedido a Domicilio</h1>
+    <p>Realiza tu pedido y disfruta de nuestros mejores platos en casa 🏠</p>
+
+    <form action="#" method="post" class="pedido-form">
+      <label>Nombre y Apellido</label>
+      <input type="text" name="nombre" placeholder="Ej. Juan Pérez" required>
+
+      <label>Nombre de plato</label>
+      <input type="text" name="plato" placeholder="Ej. Ceviche Mixto" required>
+
+      <label>Bebida</label>
+      <input type="text" name="bebida" placeholder="Ej. Chicha morada" required>
+
+      <label>Cantidad de Platos</label>
+      <input type="number" name="cantidad_platos" min="1" required>
+
+      <label>Cantidad de Bebidas</label>
+      <input type="number" name="cantidad_bebidas" min="0" required>
+
+      <label>Teléfono / WhatsApp</label>
+      <input type="text" name="telefono" placeholder="Ej. 999 888 777" required>
+
+      <label>Dirección</label>
+      <input type="text" name="direccion" placeholder="Ej. Av. Grau 123, Piura" required>
+
+      <button type="submit">Enviar Pedido</button>
+
+      <div class="success-msg" id="pedidoSuccess">✅ ¡Pedido registrado con éxito!</div>
+     
+      <script src="formularios.js"></script>
+    
+    </form>
+
+    <button onclick="location.href='index.html'">Regresar al inicio</button>
+  </div>
+
+
+
+</body>
+</html>

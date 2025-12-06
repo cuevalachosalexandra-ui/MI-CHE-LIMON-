@@ -13,6 +13,7 @@
   color:#0f100f;
   max-width: 700px;
   margin: .8rem auto 0;
+  font-size: 1.2rem;
 }
 
 .contact-grid {
@@ -136,4 +137,5 @@
   .footer-social {
     justify-content: center;
   }
+
 }

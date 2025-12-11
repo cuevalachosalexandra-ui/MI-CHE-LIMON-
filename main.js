@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  /*carrusel */
   const slides = Array.from(document.getElementsByClassName("slide"));
   if (slides.length) {
     let index = slides.findIndex(s => s.classList.contains("active"));
@@ -35,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  /*menu toggle*/
   const menuToggle = document.getElementById("menuToggle");
   const mainNav = document.getElementById("mainNav");
 
@@ -46,8 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
       menuToggle.setAttribute("aria-expanded", (!expanded).toString());
     });
   }
-
-  /*modal*/
+  
   const modal = document.getElementById("modal");
   const modalImg = document.getElementById("imagenAmpliada");
   const caption = document.getElementById("caption");
@@ -74,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  /*formulario contacto*/
+  
   const contactForm = document.getElementById("contactForm");
   const successMessage = document.getElementById("successMessage");
   if (contactForm) {
@@ -87,3 +84,4 @@ document.addEventListener("DOMContentLoaded", function() {
   
 
 });
+
